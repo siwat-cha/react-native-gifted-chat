@@ -9,6 +9,7 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
+  Dimensions,
 } from 'react-native'
 
 import QuickReplies from './QuickReplies'
@@ -32,6 +33,21 @@ import {
   MessageAudioProps,
 } from './Models'
 
+const customStyle = StyleSheet.create({
+  left: {
+      flexDirection: 'row-reverse', 
+      justifyContent: 'flex-end', 
+      alignItems: 'center', 
+      maxWidth: Dimensions.get('window').width - 80 
+  },
+  right: { 
+      flexDirection: 'row', 
+      justifyContent: 'flex-end', 
+      alignItems: 'center', 
+      maxWidth: Dimensions.get('window').width - 80 
+  }
+})
+
 const styles = {
   left: StyleSheet.create({
     container: {
@@ -39,17 +55,20 @@ const styles = {
       alignItems: 'flex-start',
     },
     wrapper: {
-      borderRadius: 15,
-      backgroundColor: Color.leftBubbleBackground,
-      marginRight: 60,
+      // borderRadius: 15,
+      borderRadius: 20,
+      backgroundColor: '#dfdfdf',
+      // marginRight: 60,
+      // custom
+      padding: 3,
       minHeight: 20,
       justifyContent: 'flex-end',
     },
     containerToNext: {
-      borderBottomLeftRadius: 3,
+        // borderBottomLeftRadius: 3,
     },
     containerToPrevious: {
-      borderTopLeftRadius: 3,
+        // borderTopLeftRadius: 3,
     },
     bottom: {
       flexDirection: 'row',
@@ -62,17 +81,20 @@ const styles = {
       alignItems: 'flex-end',
     },
     wrapper: {
-      borderRadius: 15,
-      backgroundColor: Color.defaultBlue,
-      marginLeft: 60,
+      // borderRadius: 15,
+      borderRadius: 20,
+      backgroundColor: '#fd7238',
+      // marginLeft: 60,
+      // custom
+      padding: 3,
       minHeight: 20,
       justifyContent: 'flex-end',
     },
     containerToNext: {
-      borderBottomRightRadius: 3,
+        // borderBottomRightRadius: 3,
     },
     containerToPrevious: {
-      borderTopRightRadius: 3,
+        // borderTopRightRadius: 3,
     },
     bottom: {
       flexDirection: 'row',
@@ -506,8 +528,11 @@ export default class Bubble<
         style={[
           styles[position].container,
           containerStyle && containerStyle[position],
+          // custom
+          customStyle[position]
         ]}
       >
+        {this.renderTime()}
         <View
           style={[
             styles[position].wrapper,
@@ -530,7 +555,6 @@ export default class Bubble<
                 ]}
               >
                 {this.renderUsername()}
-                {this.renderTime()}
                 {this.renderTicks()}
               </View>
             </View>
