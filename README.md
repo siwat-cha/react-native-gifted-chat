@@ -16,6 +16,7 @@
   <a href="https://www.npmjs.com/package/react-native-gifted-chat">
   <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-gifted-chat.svg"/></a>
   <a href="https://www.npmjs.com/package/react-native-gifted-chat"><img alt="npm version" src="https://badge.fury.io/js/react-native-gifted-chat.svg"/></a>
+  <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/FaridSafi/react-native-gifted-chat.svg" alt="build"></a>
    <a href="https://reactnative.gallery/FaridSafi/gifted-chat"><img src="https://img.shields.io/badge/reactnative.gallery-%F0%9F%8E%AC-green.svg"/></a>
 
 </p>
@@ -80,12 +81,11 @@
   </p>
 </p>
 
-## The future of GiftedChat 🎉 
-Please give us your advice: [Related PR](https://github.com/FaridSafi/react-native-gifted-chat/pull/1775)
-
 ## Please vote
 
 **GiftedChat** depends on other packages and some needs a boost, please vote for PRs will improve it, thanks:
+
+- https://github.com/taskrabbit/react-native-parsed-text/pull/58
 - https://github.com/watadarkstar/react-native-typing-animation/issues/18
 
 ## Features
@@ -349,7 +349,7 @@ interface QuickReplies {
 - **`renderCustomView`** _(Function)_ - Custom view inside the bubble
 - **`renderDay`** _(Function)_ - Custom day above a message
 - **`renderTime`** _(Function)_ - Custom time inside a message
-- **`renderFooter`** _(Function)_ - Custom footer component on the ListView, e.g. `'User is typing...'`; see [App.tsx](/App.tsx) for an example. Overrides default typing indicator that triggers when `isTyping` is true.
+- **`renderFooter`** _(Function)_ - Custom footer component on the ListView, e.g. `'User is typing...'`; see [example/App.js](example/App.js) for an example. Overrides default typing indicator that triggers when `isTyping` is true.
 - **`renderChatEmpty`** _(Function)_ - Custom component to render in the ListView when messages are empty
 - **`renderChatFooter`** _(Function)_ - Custom component to render below the MessageContainer (separate from the ListView)
 - **`renderInputToolbar`** _(Function)_ - Custom message composer container
@@ -451,17 +451,15 @@ If you use React Navigation, additional handling may be required to account for 
 
 ### Native
 
-1. Install `yarn global add expo-cli`
-2. Install dependencies`yarn install`
-3. `expo start`
+1. Install `yarn add -g expo-cli`
+2. `expo start`
 
 ### react-native-web
 
 #### With expo
 
-1. Install `yarn global add expo-cli`
-2. Install dependencies`yarn install`
-3. `expo start -w`
+1. Install `yarn add -g expo-cli`
+2. `expo start -w`
 
 [Upgrade snack version](https://snackager.expo.io/bundle/react-native-gifted-chat@0.15.0?bypassCache=true)
 
@@ -527,4 +525,4 @@ Feel free to ask me questions on Twitter [@FaridSafi](https://www.twitter.com/Fa
 
 ## Hire an expert!
 
-Looking for a ReactNative freelance expert with more than 14 years of experience? Contact Xavier from his [website](https://xaviercarpentier.com)!
+Looking for a ReactNative freelance expert with more than 12 years of experience? Contact Xavier from his [website](https://xaviercarpentier.com)!
